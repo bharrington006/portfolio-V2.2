@@ -34,7 +34,7 @@
       </div>
       <div class="intro__text">
         <h1>Hi,</h1>
-        <p class="intro__lead text-86">My name is Baxter Harrington and I am studying Mechanical Engineering and HCI at WashU. I'm especially interested in&nbsp;how AI is moving into our physical world, but no matter the project, I take the same approach: discovery, prototyping, and extensive testing.&nbsp;<br><br>Here's my recent work.</p>
+        <p class="intro__lead text-86">My name is Baxter Harrington and I am studying Mechanical Engineering and Human Computer Interaction at WashU. I'm especially interested in how AI is moving into our physical world, but no matter the project, I take the same approach: discovery, prototyping, and extensive testing.&nbsp;<br><br>Here's my recent work.</p>
       </div>
     </section>
 
@@ -46,45 +46,55 @@
       </div>
 
       <div class="split">
-        <figure>
-          <div class="media-frame media-frame--arm blueprint">
-            <video src="assets/video/comp-cover-v3.mp4" autoplay loop muted playsinline controls preload="auto"></video>
-          </div>
-          <figcaption class="media-caption media-caption--lg">V3 policy demo</figcaption>
-        </figure>
-        <p class="project__blurb text-86">Hi Jack</p>
-      </div>
+        <div class="split__media">
+          <figure>
+            <div class="media-frame media-frame--arm blueprint">
+              <video src="assets/video/comp-cover-v3.mp4" autoplay loop muted playsinline controls preload="auto"></video>
+            </div>
+            <figcaption class="media-caption media-caption--lg">V3 policy demo: observational view (not the webcam used in policy)</figcaption>
+          </figure>
 
-      <div class="story story--wip" hidden>
-        <div class="story__kicker">Design story — in progress</div>
-        <div class="pair">
-          <div class="media-frame media-frame--4x3 blueprint">
-            <img src="assets/images/placeholder-jackmac.jpg" alt="" loading="lazy">
+          <div class="policy-links">
+            <div class="policy-links__row">
+              <a class="btn btn-secondary" href="https://huggingface.co/spaces/lerobot/visualize_dataset" target="_blank" rel="noopener">Data Visualizer</a>
+            </div>
           </div>
-          <div class="media-frame media-frame--4x3 blueprint">
-            <img src="assets/images/placeholder-jackmac.jpg" alt="" loading="lazy">
+
+          <div class="policy-links">
+            <div class="kicker policy-links__title">Policy 2</div>
+            <div class="policy-links__row">
+              <a class="btn btn-secondary" href="https://huggingface.co/bwharrington/act_block_in_box_v3" target="_blank" rel="noopener">Policy</a>
+              <a class="btn btn-secondary" href="https://huggingface.co/datasets/bwharrington/rollout_block_in_box_v3_20260914_215923" target="_blank" rel="noopener">Dataset</a>
+              <a class="btn btn-secondary" href="https://docs.google.com/spreadsheets/d/1ozHm49vKedgoByOFR9McXVefZPExDE9ZO2JHsijKcjU/edit?usp=sharing" target="_blank" rel="noopener">Data Analysis</a>
+            </div>
           </div>
+
+          <div class="policy-links">
+            <div class="kicker policy-links__title">Policy 1</div>
+            <div class="policy-links__row">
+              <a class="btn btn-secondary" href="https://huggingface.co/datasets/bwharrington/rollout_black_box_v2_20260910_180804" target="_blank" rel="noopener">Dataset</a>
+              <a class="btn btn-secondary" href="https://docs.google.com/spreadsheets/d/1ozHm49vKedgoByOFR9McXVefZPExDE9ZO2JHsijKcjU/edit?usp=sharing" target="_blank" rel="noopener">Data Analysis</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project__blurb project__blurb--wide text-86">
+          <h3>Project Phase 1: LeRobot Open Source Policy Training</h3>
+          <p>Task: Pick up a 1.5in cube and place it in an open top box. A given policy has a successful episode if it grasps the block and places it into the box on the first try. If it misses and then tries to re-grip this is an unsuccessful episode, regardless of the success of the second try. During testing I removed the block from the environment immediately after episode failure, preventing this case entirely.</p>
+          <p>I trained 2 policies, each off of 50 episodes of demonstration using LeRoot Hugging Face toolset.</p>
+          <p><span class="inline-subheading">Policy 1</span> has a success rate of 32%. It experiences significant issues with depth perception due to the camera mount location. This issue was observed through the common failure mode of the arm grasping directly behind the block.</p>
+          <p><span class="inline-subheading">Policy 2</span> (V3) uses a new camera mount that provides a better overhead view of the workspace. This new view both minimizes the need for depth perception and also puts more of the workspace into frame, allowing for a larger array of actions. The success rate of this policy is 68%.</p>
+          <p>Note that the success rate of this entire dataset is 58%, but for the last 9 trials I was experimenting with edge cases that were not part of training. The success rate of the policy without these edge cases is 68%.</p>
         </div>
       </div>
 
-      <div class="story-toggle">
-        <div class="story-toggle__rule"></div>
-        <div class="story-toggle__control">
-          <button type="button" class="story-toggle__btn blueprint" data-story-toggle aria-expanded="false" title="SO-101 robotic arm project — design story" aria-label="Expand the SO-101 robotic arm project design story">
-            <svg class="story-toggle__icon--closed" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-            <svg class="story-toggle__icon--open" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
-          </button>
-          <span class="story-toggle__label story-toggle__label--closed">Design story</span>
-          <span class="story-toggle__label story-toggle__label--open">Collapse</span>
-        </div>
-        <div class="story-toggle__rule"></div>
-      </div>
+      <hr class="hr hr--policy-gap">
     </section>
 
     <!-- ── 02 · Konica Minolta Internship ───────────────────────────────── -->
     <section class="project" id="konica-minolta" aria-labelledby="km-title">
       <div class="project__header project__header--spaced">
-        <div class="project__number project__number--lg blueprint">02</div>
+        <div class="project__number blueprint">02</div>
         <h2 class="project__title km__title" id="km-title">Konica Minolta Internship - Experience Design with Agentforce</h2>
       </div>
 
@@ -141,8 +151,8 @@
         <div class="story-row story-row--sec">
           <div class="kicker story-row__label">Designing &amp; prototyping</div>
           <div class="story-row__body">
-            <p class="body-copy text-88">Throughout the data analysis and prototyping process I used Claude extensively. I added the interview transcripts to the context window and used Claude to pull key metrics, such as the impact of the key pain points voiced during interviews.</p>
-            <p class="body-copy text-88">Shared jobs across business units surfaced through discovery, as shown in the Venn-Diagram (Figure 2.1). I mapped these shared jobs onto Agentforce solutions that would optimize the efficiency of each of the jobs (Figure 2.2).</p>
+            <p class="body-copy text-88">Throughout the data analysis and prototyping process I used Claude extensively. I added the interview transcripts to the context window and used Claude to pull key metrics, such as the impact of pain points voiced during interviews.</p>
+            <p class="body-copy text-88">Shared jobs across business units surfaced through discovery, as shown in the Venn-Diagram (Figure 2.1). I mapped these shared jobs onto Agentforce solutions that would maximuse efficiency for each job identified (Figure 2.2).</p>
           </div>
         </div>
 
@@ -217,6 +227,7 @@
           <div class="kicker story-row__label">A1: in focus</div>
           <div class="story-row__body">
             <p class="body-copy text-88">After identifying the subagents to be designed, I honed in on subagent A1: Account intelligence. This agent will provide an account summary right on the salesforce landing page, pulling the specific metrics that the end users voiced in discovery in oder to give the sales reps an automated account brief specifically designed for the needs of their business unit. The discovery interviews laid bare that an agent of this nature would save each sales rep upwards of 30 minutes before each account contact point.</p>
+            <p class="body-copy text-88">In addition to the efficiency gains that the Account Intelligence agent provides, this agent also holds the potential to improve the quality of the data interpretation that the sales reps walk into customer meetings with. With the agent </p>
             <p class="body-copy text-88">As part of creating an optimized account brief view, additional agents will pull service history of that customer’s devices, and data from other systems outside of salesforce.</p>
           </div>
         </div>
@@ -245,16 +256,16 @@
           <p class="body-copy text-88">Using Claude Design I was able to create elaborate prototypes in HTML for the end users to get an accurate understanding of what the user experience will be of the shipped agent. This efficient prototyping process allowed me to create the individualized view for each of the business units.</p>
         </div>
 
-        <div class="story-row story-row--sec">
-          <div class="kicker story-row__label">Validation sessions</div>
+        <div class="story-row">
+          <div class="kicker kicker--muted story-row__label">Validation sessions</div>
           <p class="body-copy text-88">Returned to the same interview participants with the HTML prototypes for 30 minute feedback sessions on design utility. These sessions resulted in further design criteria for the next iteration of prototypes.</p>
         </div>
 
         <div class="story-row">
-          <div class="kicker kicker--muted story-row__label">Impact</div>
+          <div class="kicker kicker--muted story-row__label">Lasting Value</div>
           <div class="story-row__body">
-            <p class="body-copy text-88"><span class="lead-in">Discovery interviews:</span> These will act as a continued source of truth as the Agentforce initiative continues on after the end of my internship experience. Agentforce build-out wasn’t available during my internship due to enterprise deployment issues, so I went in-depth on the pre-production design work that I did have access to.</p>
-            <p class="body-copy text-88"><span class="lead-in">Agent architecture:</span> I created a handoff deck with a complete dive into the agent architecture and rollout plan for the next person that will be spearheading this initiative.</p>
+            <p class="body-copy text-88"><span class="lead-in">Discovery interviews:</span> These will act as a longstanding source of truth after the end of my internship experience.</p>
+            <p class="body-copy text-88"><span class="lead-in">Agent architecture:</span> I created a handoff deck with a complete overview of the agent architecture and rollout plan, and facilitated handoff the next person that will be spearheading this initiative.</p>
           </div>
         </div>
 

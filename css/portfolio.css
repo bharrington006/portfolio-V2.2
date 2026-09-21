@@ -174,10 +174,9 @@ a:hover { color: var(--color-accent-700); }
   place-items: center;
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   color: var(--color-accent-700);
 }
-.project__number--lg { font-size: 20px; }
 
 .project__title {
   font-size: 34px;
@@ -199,6 +198,34 @@ a:hover { color: var(--color-accent-700); }
   max-width: 26ch;
   text-wrap: pretty;
 }
+.project__blurb--wide { max-width: none; }
+.project__blurb--wide p:last-child { margin-bottom: 0; }
+.project__blurb h3 { margin-bottom: calc(var(--space-2) + 10px); }
+
+/* Inline text styled like a subheading (h3), without breaking out of the paragraph flow */
+.inline-subheading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 25px;
+  letter-spacing: -0.015em;
+}
+
+/* Left-column media stack: figure + per-policy link buttons */
+.split__media {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.policy-links__title { margin-bottom: 10px; }
+.policy-links__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.policy-links__row .btn { font-size: 20px; }
+
+/* Extra breathing room below the SO-101 policy buttons before the section divider */
+.hr--policy-gap { margin-top: calc(var(--space-4) + 20px); }
 
 /* Two- and three-up image grids */
 .pair {
