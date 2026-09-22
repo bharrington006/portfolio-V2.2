@@ -84,7 +84,14 @@
           <p>I trained 2 policies, each off of 50 episodes of demonstration using LeRoot Hugging Face toolset.</p>
           <p><span class="inline-subheading">Policy 1</span> has a success rate of 32%. It experiences significant issues with depth perception due to the camera mount location. This issue was observed through the common failure mode of the arm grasping directly behind the block.</p>
           <p><span class="inline-subheading">Policy 2</span> (V3) uses a new camera mount that provides a better overhead view of the workspace. This new view both minimizes the need for depth perception and also puts more of the workspace into frame, allowing for a larger array of actions. The success rate of this policy is 68%.</p>
-          <p>Note that the success rate of this entire dataset is 58%, but for the last 9 trials I was experimenting with edge cases that were not part of training. The success rate of the policy without these edge cases is 68%.</p>
+          <p>Note that the success rate of this entire dataset is 58%, but for the last 9 trials I was experimenting with edge cases that the policy was not trained for. The success rate of the policy without these edge cases is 68%.</p>
+        </div>
+      </div>
+
+      <div class="story-row story-row--sec">
+        <div class="kicker story-row__label">Next Steps:</div>
+        <div class="story-row__body">
+          <p class="body-copy text-88">Using the Gymnasium environment to create custom reinforcement learning policies for my SO-101 to bring into the physical world. Currently starting with a simple point reach task before getting into grasping mechanics.</p>
         </div>
       </div>
 
@@ -226,8 +233,8 @@
         <div class="story-row story-row--sec">
           <div class="kicker story-row__label">A1: in focus</div>
           <div class="story-row__body">
-            <p class="body-copy text-88">After identifying the agents to be designed, I honed in on agent A1: Account Intelligence. This agent will provide an account summary right on the salesforce account landing page, pulling the specific metrics that the end users voiced in discovery in oder to give them the view that will provide them with the most value. The discovery interviews laid bare that an agent of this nature would save each sales rep upwards of 20 minutes before each account contact point, saving up to 4 hours of prep time per person every week.</p>
-            <p class="body-copy text-88">In addition to these efficiency gains, this agent will evalute every account against the same criteria, removing the variability that occurs when analysis quality depends on a sales rep's time, attention, or experience.</p>
+            <p class="body-copy text-88">After identifying the agents to be designed, I honed in on agent A1: Account Intelligence. This agent will provide an account summary right on the salesforce account landing page, pulling the specific metrics that the end users voiced in discovery in order to give them the view that will provide them with the most value. The discovery interviews laid bare that an agent of this nature would save each sales rep upwards of 20 minutes before each account contact point, saving up to 4 hours of prep time per person every week.</p>
+            <p class="body-copy text-88">In addition to these efficiency gains, this agent will evaluate every account against the same criteria, removing the variability that occurs when analysis quality depends on a sales rep's time, attention, or experience.</p>
             <p class="body-copy text-88">As part of creating an optimized account brief view, additional agents will pull service history from a customer's devices, and data from other systems outside of salesforce.</p>
           </div>
         </div>
@@ -259,14 +266,6 @@
         <div class="story-row">
           <div class="kicker kicker--muted story-row__label">Validation sessions</div>
           <p class="body-copy text-88">Returned to the same interview participants with the HTML prototypes for 30 minute feedback sessions on design utility. These sessions resulted in further design criteria for the next iteration of prototypes.</p>
-        </div>
-
-        <div class="story-row">
-          <div class="kicker kicker--muted story-row__label">Lasting Value</div>
-          <div class="story-row__body">
-            <p class="body-copy text-88"><span class="lead-in">Discovery interviews:</span> These will act as a longstanding source of truth after the end of my internship experience.</p>
-            <p class="body-copy text-88"><span class="lead-in">Agent architecture:</span> I created a handoff deck with a complete overview of the agent architecture and rollout plan, and facilitated handoff the next person that will be spearheading this initiative.</p>
-          </div>
         </div>
 
       </div>
